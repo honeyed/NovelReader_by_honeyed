@@ -1,0 +1,145 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "3:5614323093783676256",
+      "lastPropertyId": "16:1469744506131465325",
+      "name": "BookEntity",
+      "properties": [
+        {
+          "id": "1:3185428425747952458",
+          "name": "id",
+          "type": 6,
+          "flags": 129
+        },
+        {
+          "id": "2:6847089382707854138",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "3:5094482378845560886",
+          "name": "author",
+          "type": 9
+        },
+        {
+          "id": "4:4053924256071140652",
+          "name": "shortIntro",
+          "type": 9
+        },
+        {
+          "id": "5:5315687335540722095",
+          "name": "cover",
+          "indexId": "1:8068677116570419874",
+          "type": 9,
+          "flags": 2048
+        },
+        {
+          "id": "6:103665838977096304",
+          "name": "hasCp",
+          "type": 1,
+          "flags": 4
+        },
+        {
+          "id": "7:6748460705268408424",
+          "name": "latelyFollower",
+          "type": 5,
+          "flags": 4
+        },
+        {
+          "id": "8:1100445350676803891",
+          "name": "retentionRatio",
+          "type": 8,
+          "flags": 4
+        },
+        {
+          "id": "9:7956771272705929297",
+          "name": "updated",
+          "type": 9
+        },
+        {
+          "id": "10:2875111838916318865",
+          "name": "lastRead",
+          "type": 9
+        },
+        {
+          "id": "11:3483326367269900876",
+          "name": "chaptersCount",
+          "type": 5,
+          "flags": 4
+        },
+        {
+          "id": "12:3555886287229640394",
+          "name": "lastChapter",
+          "type": 9
+        },
+        {
+          "id": "13:5004694796457130600",
+          "name": "isUpdate",
+          "type": 1,
+          "flags": 4
+        },
+        {
+          "id": "14:3500039328016766095",
+          "name": "isLocal",
+          "type": 1,
+          "flags": 4
+        },
+        {
+          "id": "15:9136894278539993649",
+          "name": "readerChapter",
+          "type": 5,
+          "flags": 4
+        },
+        {
+          "id": "16:1469744506131465325",
+          "name": "readerPage",
+          "type": 5,
+          "flags": 4
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "3:5614323093783676256",
+  "lastIndexId": "1:8068677116570419874",
+  "lastRelationId": "1:1541634618098622394",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    7287824253693089346,
+    6030263838288280863
+  ],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    7760143689356610136,
+    6520871718343786330,
+    5057034135902785938,
+    3549210456888134231,
+    3831957769078902101,
+    4628644557675271210,
+    889941872749749181,
+    1452658186968737129,
+    8520136191086520473,
+    1843632042621329723,
+    8556894940326430370,
+    3956728987621277980,
+    4330941282117240674,
+    1360417840039394723,
+    7809648803903306186,
+    2387263536925677074,
+    5774240186299301772,
+    679394913813091019,
+    354991435914790902,
+    7899377500642596239,
+    2794160301033387605,
+    493993036187352116
+  ],
+  "retiredRelationUids": [
+    1541634618098622394
+  ],
+  "version": 1
+}

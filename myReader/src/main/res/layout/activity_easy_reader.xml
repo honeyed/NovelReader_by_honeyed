@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.novel.reader.widget.ReaderView
+            android:id="@+id/bookView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9">
+
+            <com.novel.reader.widget.AdView
+                android:id="@+id/ad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center" />
+
+            <com.novel.reader.widget.ContentView
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/theme_leather_bg"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="next" />
+
+            <com.novel.reader.widget.ContentView
+                android:id="@+id/current"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/theme_leather_bg"
+                android:elevation="30dp"
+                android:gravity="center"
+                android:text="current" />
+
+            <com.novel.reader.widget.ContentView
+                android:id="@+id/pre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/theme_leather_bg"
+                android:elevation="60dp"
+                android:gravity="center"
+                android:text="pre" />
+        </com.novel.reader.widget.ReaderView>
+
+        <com.novel.reader.widget.BottomAdView
+            android:id="@+id/bottomAd"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_dark" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/read_ll_top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/nb.read.menu.bg"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/app_bar_read_btn_back_white_defa"
+            android:gravity="center_vertical"
+            android:text="返回"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/read_ll_bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        android:background="@color/nb.read.menu.bg"
+        android:clickable="true"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/brightness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/read_setting_iv_brightness_minus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="center"
+                android:src="@mipmap/ic_brightness_minus" />
+
+            <SeekBar
+                android:id="@+id/read_setting_sb_brightness"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="255"
+                android:maxHeight="3dp"
+                android:minHeight="3dp"
+                android:progressDrawable="@drawable/seekbar_bg"
+                android:thumb="@drawable/seekbar_thumb"
+                android:thumbOffset="10dp" />
+
+            <ImageView
+                android:id="@+id/read_setting_iv_brightness_plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:scaleType="center"
+                android:src="@mipmap/ic_brightness_plus" />
+
+            <CheckBox
+                android:id="@+id/read_setting_cb_brightness_auto"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="系统"
+                android:button="@null"
+                android:textColor="@drawable/selector_btn_read_setting"
+                android:background="@drawable/selector_btn_read_setting"
+                style="@style/NB.Theme.TextAppearance.Read.BottomMenu"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/font"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/read_setting_tv_font_minus"
+                style="@style/NB.Theme.TextAppearance.Read.BottomMenu"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/nb.read_setting.btn_height"
+                android:background="@drawable/shape_btn_read_setting_normal"
+                android:gravity="center"
+                android:text="Aa-"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/read_setting_tv_font"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="15"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/read_setting_tv_font_plus"
+                style="@style/NB.Theme.TextAppearance.Read.BottomMenu"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/nb.read_setting.btn_height"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_btn_read_setting_normal"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Aa+"
+                android:textSize="18dp" />
+
+            <CheckBox
+                android:id="@+id/read_setting_cb_font_default"
+                style="@style/NB.Theme.TextAppearance.Read.BottomMenu"
+                android:layout_width="40dp"
+                android:layout_height="@dimen/nb.read_setting.btn_height"
+                android:background="@drawable/selector_btn_read_setting"
+                android:button="@null"
+                android:gravity="center"
+                android:text="默认"
+                android:textColor="@drawable/selector_btn_read_setting" />
+        </LinearLayout>
+
+        <!--页面进度栏-->
+        <LinearLayout
+            android:id="@+id/chapterSelect"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/read_tv_pre_chapter"
+                style="@style/NB.Theme.TextAppearance.Read.BottomMenu"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="上一章" />
+
+            <SeekBar
+                android:id="@+id/read_sb_chapter_progress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:maxHeight="3dp"
+                android:minHeight="3dp"
+                android:progressDrawable="@drawable/seekbar_bg"
+                android:thumb="@drawable/seekbar_thumb"
+                android:thumbOffset="10dp" />
+
+            <TextView
+                android:id="@+id/read_tv_next_chapter"
+                style="@style/NB.Theme.TextAppearance.Read.BottomMenu"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="下一章" />
+        </LinearLayout>
+
+        <!--菜单栏-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:orientation="horizontal"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/read_tv_category"
+                style="@style/NB.Theme.TextAppearance.Read.BottomMenu.Button"
+                android:drawableTop="@mipmap/ic_read_menu_category"
+                android:onClick="showCatalog"
+                android:text="@string/nb.read.category" />
+
+            <TextView
+                android:id="@+id/read_tv_night_mode"
+                style="@style/NB.Theme.TextAppearance.Read.BottomMenu.Button"
+                android:drawableTop="@mipmap/ic_read_menu_night"
+                android:text="@string/nb.mode.night" />
+
+            <!--                <TextView
+                                style="@style/NB.Theme.TextAppearance.Read.BottomMenu.Button"
+                                android:id="@+id/read_tv_download"
+                                android:drawableTop="@drawable/ic_read_menu_download"
+                                android:text="@string/nb.read.download" />-->
+
+            <TextView
+                android:id="@+id/read_tv_setting"
+                style="@style/NB.Theme.TextAppearance.Read.BottomMenu.Button"
+                android:drawableTop="@mipmap/ic_read_menu_font"
+                android:text="@string/nb.read.setting"
+                android:onClick="read_tv_setting"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/catalogView"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:background="@mipmap/theme_leather_bg"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/catalogRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</RelativeLayout>
